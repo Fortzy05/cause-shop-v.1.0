@@ -8,3 +8,17 @@
     text-wrap: balance;
   }
 }
+
+.inclined {
+  transform: skewX(-20deg);
+  transform-origin: top right;
+
+}
+
+.inclined::after {
+  transform: skew(-20deg);
+
+
+
+
+}

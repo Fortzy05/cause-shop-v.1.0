@@ -1,7 +1,24 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/menu-nav-logo-1.png";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
 export default function Header() {
+  const pathname = usePathname();
+  const excludedRoutes = ["/login", "/checkout"];
+  const showHeader = !excludedRoutes.includes(pathname.pathname);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleItemClick = (index) => {
+    setActiveIndex(index);
+  };
+
+  if (!showHeader) {
+    return null;
+  }
   return (
     <section className="w-full h-[139px] py-2">
       <div className="flex items-center justify-between mr-3 md:mr-24 h-[52px]">
@@ -11,9 +28,11 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-2">
           <div className=" md:p-2.5">
-            <button className="bg-[#424242] w-20 h-[30px] text-white rounded-[10px]">
-              Login
-            </button>
+            <Link href="/login">
+              <button className="bg-[#424242] w-20 h-[30px] text-white rounded-[10px]">
+                Login
+              </button>
+            </Link>
           </div>
           <div className="md:p-2.5">
             <button>Sign Up</button>
@@ -21,17 +40,45 @@ export default function Header() {
         </div>
       </div>
       <div className="bg-[#E7F8FC] h-[86px] flex items-center md:justify-between ">
-        <ul className="md:flex hidden text-[#878181] text-2xl font-[400] gap-10 mx-auto items-center">
-          <li className="hover:border-b-4 hover:text-[#000000] border-b-[#E3B522]">
+        <ul className="md:flex hidden cursor-pointer text-[#878181] text-2xl font-[400] gap-10 mx-auto items-center">
+          <li
+            className={` ${
+              activeIndex === 0
+                ? "border-b-4 text-[#000000] border-b-[#E3B522]"
+                : ""
+            }`}
+            onClick={() => handleItemClick(0)}
+          >
             Home
           </li>
-          <li className="hover:border-b-4 hover:text-[#000000] border-b-[#E3B522]">
+          <li
+            className={` ${
+              activeIndex === 1
+                ? "border-b-4 text-[#000000] border-b-[#E3B522]"
+                : ""
+            }`}
+            onClick={() => handleItemClick(1)}
+          >
             Shop
           </li>
-          <li className="hover:border-b-4 hover:text-[#000000] border-b-[#E3B522]">
+          <li
+            className={` ${
+              activeIndex === 2
+                ? "border-b-4 text-[#000000] border-b-[#E3B522]"
+                : ""
+            }`}
+            onClick={() => handleItemClick(2)}
+          >
             Volunteer
           </li>
-          <li className="hover:border-b-4 hover:text-[#000000] border-b-[#E3B522]">
+          <li
+            className={` ${
+              activeIndex === 3
+                ? "border-b-4 text-[#000000] border-b-[#E3B522]"
+                : ""
+            }`}
+            onClick={() => handleItemClick(3)}
+          >
             Contact Us
           </li>
           <button className="bg-[#E3B522] text-sm px-5 py-2.5 text-white rounded-[50px]">
@@ -68,7 +115,7 @@ export default function Header() {
             />
           </svg>
           <div className="items-center flex relative">
-            <span className="bg-red-500 rounded-full w-4 h-4 text-center absolute text-[12px] -top-2 -right-1 text-white">
+            <span className="absolute mb-6 mx-[10px] rounded-full border-[#FF0000] border bg-[#FF0000] text-white py-[1px] px-[6px] text-[11px]">
               2
             </span>
             <svg
