@@ -10,8 +10,9 @@
 }
 
 .inclined {
-  transform: skewX(-20deg);
-  transform-origin: top right;
+  transform: skew(-20deg);
+  /* transform-origin: top right; */
+  
 
 }
 

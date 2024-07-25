@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Header() {
   const pathname = usePathname();
-  const excludedRoutes = ["/login", "/checkout"];
+  const excludedRoutes = ["/login", "/sign-in"];
   const showHeader = !excludedRoutes.includes(pathname.pathname);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -35,7 +35,9 @@ export default function Header() {
             </Link>
           </div>
           <div className="md:p-2.5">
-            <button>Sign Up</button>
+            <Link href="/sign-in">
+              <button>Sign Up</button>
+            </Link>
           </div>
         </div>
       </div>
