@@ -118,7 +118,7 @@ export default function Header() {
           </svg>
           <div className="items-center flex relative">
             <span className="absolute mb-6 mx-[10px] rounded-full border-[#FF0000] border bg-[#FF0000] text-white py-[1px] px-[6px] text-[11px]">
-              2
+              0
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

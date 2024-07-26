@@ -13,7 +13,7 @@ export default function page() {
             <div className="bg-black/5 absolute inset-0 w-[510px] h-screen" />
             <div className="absolute flex bg-black/50 rounded-[50px]  left-[55px] top-[197px]  h-[350px] w-[400px] items-center">
               <div className="items-center flex mx-auto flex-col text-[#FFFFFF]/90 font-light">
-                <h1 className="text-[#00A859] font-bold text-5xl">
+                <h1 className="text-[#00A859]  font-bold leading-[64px] text-[48px]">
                   Welcome Back!
                 </h1>
                 <h4 className="my-1">You already have an account?</h4>
