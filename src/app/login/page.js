@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../../assets/menu-nav-logo-1.png";
-import facebookIcon from "../../assets/baselinefacebook.svg";
+import facebookIcon from "../../assets/jam_facebook.svg";
 
-import twitterIcon from "../../assets/twitter.svg";
+import twitterIcon from "../../assets/prime_twitter.svg";
+import googleIcon from "../../assets/prime_google.svg";
 export default function page() {
   return (
     <section className="relative mx-auto shadow-lg h-screen w-[1400px] ">
@@ -26,7 +27,7 @@ export default function page() {
             <Image className="z-10" src={logo} height={64} width={60} />
             <h1 className="text-white z-10">KGF CAUSE SHOP</h1>
           </div>
-          {/* <Image src="/next.svg" height={743} width={510} /> */}
+          <Image src="/frame 426.svg" height={743} width={510} />
         </div>
         <div className="w-[510px] h-[743px] flex flex-col items-center gap-3 mx-auto pt-[105px]">
           <h1 className="text-[#00A859] text-5xl font-bold">Create Account</h1>
@@ -37,20 +38,20 @@ export default function page() {
             <Image
               className="border-2 rounded-full fill-slate-500"
               src={facebookIcon}
-              height={50}
-              width={50}
+              height={24}
+              width={24}
+            />
+            <Image
+              className="border-2 rounded-full fill-slate-500"
+              src={googleIcon}
+              height={24}
+              width={24}
             />
             <Image
               className="border-2 rounded-full fill-slate-500"
               src={twitterIcon}
-              height={50}
-              width={50}
-            />
-            <Image
-              className="border-2 rounded-full fill-slate-500"
-              src={twitterIcon}
-              height={50}
-              width={50}
+              height={24}
+              width={24}
             />
           </div>
           <h4 className="text-center leading-10 font-normal text-[1rem]">

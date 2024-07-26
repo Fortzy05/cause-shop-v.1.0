@@ -2,9 +2,9 @@ import React from "react";
 
 export default function ShoppingpageHighlight() {
   return (
-    <section className="my-32 flex bg-[#EFEFEF] w-[1198px] h-[360px] mx-auto">
+    <section className="my-11 flex bg-[#EFEFEF] w-[1198px] h-[360px] mx-auto">
       <div className="bg-black/10 w-[304px] h-[360px]">
-        <img className="w-[304px] h-[360px]" src="/next.svg" alt="" />
+        <img className="w-[304px] h-[360px]" src="/Pexels Photo by Ron Lach.svg" alt="" />
       </div>
       <div className="py-[58px] px-[5rem]">
         <div>
@@ -31,6 +31,10 @@ export default function ShoppingpageHighlight() {
           </svg>
         </div>
       </div>
+
+  <section>
+    <div></div>
+  </section>
     </section>
   );
 }
