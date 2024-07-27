@@ -24,9 +24,15 @@ export default function page() {
                 <button className="rounded-[50px] px-5 py-1.5 mt-2 text-[#FFFFFF]/80  border-[#FFFFFF]/70 border-2">
                   sign in
                 </button>
-              </div> 
+              </div>
             </div>
-            <Image className="z-10" src={logo} objectFit="cover" height={64} width={60} />
+            <Image
+              className="z-10"
+              src={logo}
+              objectFit="cover"
+              height={64}
+              width={60}
+            />
             <h1 className="text-white z-10">KGF CAUSE SHOP</h1>
           </div>
           <Image src="/Frame 426 (1).svg" height={743} width={510} />
@@ -39,24 +45,30 @@ export default function page() {
             sign in with
           </h4>
           <div className="flex gap-4 mx-auto">
-            <Image
-              className="border-2 h-[50px] w-[50px] rounded-full fill-slate-500"
-              src={facebookIcon}
-              height={24}
-              width={24}
-            />
-            <Image
-              className="border-2 h-[50px] w-[50px] rounded-full fill-slate-500"
-              src={googleIcon}
-              height={24}
-              width={24}
-            />
-            <Image
-              className="border-2 h-[50px] w-[50px] rounded-full fill-slate-500"
-              src={twitterIcon}
-              height={24}
-              width={24}
-            />
+            <div className="border-2  items-center flex rounded-full w-[50px] h-[50px]">
+              <Image
+                className="mx-auto"
+                src={facebookIcon}
+                height={24}
+                width={24}
+              />
+            </div>
+            <div className="border-2  items-center flex rounded-full w-[50px] h-[50px]">
+              <Image
+                className="mx-auto"
+                src={googleIcon}
+                height={24}
+                width={24}
+              />
+            </div>
+            <div className="border-2 rounded-full h-[50px] flex w-[50px]">
+              <Image
+                className=" mx-auto"
+                src={twitterIcon}
+                height={24}
+                width={24}
+              />
+            </div>
           </div>
           <h4 className="text-center leading-10 font-normal text-[1rem]">
             or use your email account
@@ -108,9 +120,7 @@ export default function page() {
               <button className="bg-[#E3B522] mt-2 mx-auto leading-5 text-[#FFFFFF] text-[14px] px-5 py-2.5 rounded-[50px]">
                 sign up
               </button>
-              <h4
-                className="mx-auto flex font-normal my-2 text-[#878181]"
-              >
+              <h4 className="mx-auto flex font-normal my-2 text-[#878181]">
                 Forgot Password?
               </h4>
             </div>

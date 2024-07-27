@@ -35,24 +35,30 @@ export default function page() {
             sign up with
           </h4>
           <div className="flex gap-4 mx-auto">
-            <Image
-              className="border-2 rounded-full fill-slate-500"
-              src={facebookIcon}
-              height={24}
-              width={24}
-            />
-            <Image
-              className="border-2 rounded-full fill-slate-500"
-              src={googleIcon}
-              height={24}
-              width={24}
-            />
-            <Image
-              className="border-2 rounded-full fill-slate-500"
-              src={twitterIcon}
-              height={24}
-              width={24}
-            />
+            <div className="border-2  items-center flex rounded-full w-[50px] h-[50px]">
+              <Image
+                className="mx-auto"
+                src={facebookIcon}
+                height={24}
+                width={24}
+              />
+            </div>
+            <div className="border-2  items-center flex rounded-full w-[50px] h-[50px]">
+              <Image
+                className="mx-auto"
+                src={googleIcon}
+                height={24}
+                width={24}
+              />
+            </div>
+            <div className="border-2 rounded-full h-[50px] flex w-[50px]">
+              <Image
+                className=" mx-auto"
+                src={twitterIcon}
+                height={24}
+                width={24}
+              />
+            </div>
           </div>
           <h4 className="text-center leading-10 font-normal text-[1rem]">
             or use your email for registration
