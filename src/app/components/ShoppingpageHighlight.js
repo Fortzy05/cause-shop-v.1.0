@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function ShoppingpageHighlight() {
@@ -5,10 +6,12 @@ export default function ShoppingpageHighlight() {
     <section>
       <div className="my-11 flex bg-[#EFEFEF] w-[1198px] h-[360px] mx-auto">
         <div className="bg-black/10 w-[304px] h-[360px]">
-          <img
-            className="w-[304px] h-[360px]"
+          <Image
+            width={304}
+            height={360}
+            // className="w-[304px] h-[360px]"
             src="/Pexels Photo by Ron Lach.svg"
-            alt=""
+            alt="landing image"
           />
         </div>
         <div className="py-[58px] px-[5rem]">
@@ -17,7 +20,7 @@ export default function ShoppingpageHighlight() {
               Men's Winter sale
             </h1>
             <h2 className="w-[583px] text-[#000000] text-[3rem] leading-[64px] font-bold">
-              Summer sale - Up to 50% Off All Products!
+              Summer sale &ndash; Up to 50% Off All Products!
             </h2>
           </div>
           <div className="px-2 flex items-center gap-2 mt-5 w-[140px] h-[44px] border-2 border-[#000000]">
@@ -37,19 +40,18 @@ export default function ShoppingpageHighlight() {
           </div>
         </div>
       </div>
-      
-        <div className="pl-24 mb-8">
-          <h1 className="text-[#00A859] font-semibold text-[2rem] leading-10 ">
-            New Arrivals
-          </h1>
-          <p className="text-[1rem] mt-8 leading-6 text-[#000000] w-[288px]">
-            Discover the latest trends and hottest products fresh off the line!
-          </p>
-          <button className="mt-8 px-5 py-[6px] border-[1px] rounded-[50px]">
-            See all
-          </button>
-        </div>
-      
+
+      <div className="pl-24 mb-8">
+        <h1 className="text-[#00A859] font-semibold text-[2rem] leading-10 ">
+          New Arrivals
+        </h1>
+        <p className="text-[1rem] mt-8 leading-6 text-[#000000] w-[288px]">
+          Discover the latest trends and hottest products fresh off the line!
+        </p>
+        <button className="mt-8 px-5 py-[6px] border-[1px] rounded-[50px]">
+          See all
+        </button>
+      </div>
     </section>
   );
 }
