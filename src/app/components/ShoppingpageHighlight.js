@@ -17,8 +17,9 @@ export default function ShoppingpageHighlight() {
         <div className="py-[58px] px-[5rem]">
           <div>
             <h1 className="text-[#14BDE3] mb-4 leading-6 text-[1rem]">
-              Men's Winter sale
+              Men&apos;s Winter sale
             </h1>
+
             <h2 className="w-[583px] text-[#000000] text-[3rem] leading-[64px] font-bold">
               Summer sale &ndash; Up to 50% Off All Products!
             </h2>
@@ -62,7 +63,6 @@ export default function ShoppingpageHighlight() {
                   alt={shop.name}
                   width={232}
                   height={362}
-                  
                 />
                 <h1 className="text-[24px] leading-[2rem] text-[#424242] text-center">
                   {shop.name}
@@ -77,15 +77,25 @@ export default function ShoppingpageHighlight() {
       </div>
       <section className="bg-[#E7F8FC] w-full h-[602px]">
         <div className="flex gap-20 justify-center items-center h-full">
-          <Image className="shadow-sm " src="/rectangle 1344.svg" height={399} width={624} alt="culture attire" />
+          <Image
+            className="shadow-sm "
+            src="/rectangle 1344.svg"
+            height={399}
+            width={624}
+            alt="culture attire"
+          />
           <div>
-            <h1 className="text-[#00A859] text-[2rem] leading-10 font-bold mb-[40px] ">Embrace The African Culture</h1>
+            <h1 className="text-[#00A859] text-[2rem] leading-10 font-bold mb-[40px] ">
+              Embrace The African Culture
+            </h1>
             <p className="w-[387px] text-[1rem] leading-6 text-[#424242] ">
               Would you love to look African, then shop from our collections of
               African Attire, as you embrace the African culture, Look Africa,
               Feel Africa.
             </p>
-            <button className="border-[1px] border-[#000000] rounded-[50px] px-5 py-2.5 mt-11 text-[#000000] text-[13px] leading-[14px] ">Shop now</button>
+            <button className="border-[1px] border-[#000000] rounded-[50px] px-5 py-2.5 mt-11 text-[#000000] text-[13px] leading-[14px] ">
+              Shop now
+            </button>
           </div>
         </div>
       </section>
