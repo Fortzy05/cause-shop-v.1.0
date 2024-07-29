@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import data from "./data.json"
+
 export default function ShoppingpageHighlight() {
   return (
     <section>
@@ -24,8 +25,8 @@ export default function ShoppingpageHighlight() {
               Summer sale &ndash; Up to 50% Off All Products!
             </h2>
           </div>
-          <div className="px-2 flex items-center gap-2 mt-5 w-[140px] h-[44px] border-2 border-[#000000]">
-            <button className="text-[20px]"> Shop now</button>
+          <div className="px-2 flex items-center gap-2 mt-5 w-[145px] h-[44px] border-[1px] border-[#000000]">
+            <button className="text-[20px] leading-6"> Shop now</button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
