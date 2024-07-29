@@ -1,0 +1,21 @@
+[
+  {
+    "id": "1",
+    "name": "Lorem ipsum dolor",
+    "price": "$400.00",
+    "image": "/Polygon 9.svg"
+  },
+  {
+    "id": "2",
+    "name": "Lorem ipsum dolor",
+    "price": "$400.00",
+    "image": "/Polygon 8.svg"
+  },
+  {
+     "id": "3",
+    "name": "Lorem ipsum dolor",
+    "price": "$400.00",
+    "image": "/polygon 7.svg"
+  }
+  
+]

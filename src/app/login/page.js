@@ -24,10 +24,10 @@ export default function page() {
                 </button>
               </div>
             </div>
-            <Image className="z-10" src={logo} height={64} width={60} />
+            <Image className="z-10" src={logo} height={64} width={60} alt="" />
             <h1 className="text-white z-10">KGF CAUSE SHOP</h1>
           </div>
-          <Image src="/frame 426.svg" height={743} width={510} />
+          <Image src="/frame 426.svg" height={743} width={510} alt="" />
         </div>
         <div className="w-[510px] h-[743px] flex flex-col items-center gap-3 mx-auto pt-[105px]">
           <h1 className="text-[#00A859] text-5xl font-bold">Create Account</h1>
@@ -41,6 +41,7 @@ export default function page() {
                 src={facebookIcon}
                 height={24}
                 width={24}
+                alt=""
               />
             </div>
             <div className="border-2  items-center flex rounded-full w-[50px] h-[50px]">
@@ -49,6 +50,7 @@ export default function page() {
                 src={googleIcon}
                 height={24}
                 width={24}
+                alt=""
               />
             </div>
             <div className="border-2 rounded-full h-[50px] flex w-[50px]">
@@ -57,6 +59,7 @@ export default function page() {
                 src={twitterIcon}
                 height={24}
                 width={24}
+                alt=""
               />
             </div>
           </div>

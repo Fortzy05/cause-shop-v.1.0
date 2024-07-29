@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
+import data from "./data.json"
 export default function ShoppingpageHighlight() {
   return (
     <section>
@@ -41,17 +41,54 @@ export default function ShoppingpageHighlight() {
         </div>
       </div>
 
-      <div className="pl-24 mb-8">
-        <h1 className="text-[#00A859] font-semibold text-[2rem] leading-10 ">
-          New Arrivals
-        </h1>
-        <p className="text-[1rem] mt-8 leading-6 text-[#000000] w-[288px]">
-          Discover the latest trends and hottest products fresh off the line!
-        </p>
-        <button className="mt-8 px-5 py-[6px] border-[1px] rounded-[50px]">
-          See all
-        </button>
+      <div className=" flex mb-8 gap-24 pt-11">
+        <div className="pl-24 mb-8">
+          <h1 className="text-[#00A859] font-semibold text-[2rem] leading-10 ">
+            New Arrivals
+          </h1>
+          <p className="text-[1rem] mt-8 leading-6 text-[#000000] w-[288px]">
+            Discover the latest trends and hottest products fresh off the line!
+          </p>
+          <button className="mt-8  border-[#000000] px-5 py-[6px] border-[1px] rounded-[50px]">
+            See all
+          </button>
+        </div>
+        <div className="flex gap-24">
+          {data.map((shop) => {
+            return (
+              <div className="" key={shop.id}>
+                <Image
+                  src={shop.image}
+                  alt={shop.name}
+                  width={232}
+                  height={362}
+                  
+                />
+                <h1 className="text-[24px] leading-[2rem] text-[#424242] text-center">
+                  {shop.name}
+                </h1>
+                <p className="text-2xl text-[#000000] font-bold text-center">
+                  {shop.price}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
+      <section className="bg-[#E7F8FC] w-full h-[602px]">
+        <div className="flex gap-20 justify-center items-center h-full">
+          <Image className="shadow-sm " src="/rectangle 1344.svg" height={399} width={624} alt="culture attire" />
+          <div>
+            <h1 className="text-[#00A859] text-[2rem] leading-10 font-bold mb-[40px] ">Embrace The African Culture</h1>
+            <p className="w-[387px] text-[1rem] leading-6 text-[#424242] ">
+              Would you love to look African, then shop from our collections of
+              African Attire, as you embrace the African culture, Look Africa,
+              Feel Africa.
+            </p>
+            <button className="border-[1px] border-[#000000] rounded-[50px] px-5 py-2.5 mt-11 text-[#000000] text-[13px] leading-[14px] ">Shop now</button>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
