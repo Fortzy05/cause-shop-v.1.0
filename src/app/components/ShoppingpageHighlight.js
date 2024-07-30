@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import data from "./data.json"
+import data from "./data.json";
 
 export default function ShoppingpageHighlight() {
   return (
@@ -97,6 +97,38 @@ export default function ShoppingpageHighlight() {
             <button className="border-[1px] border-[#000000] rounded-[50px] px-5 py-2.5 mt-11 text-[#000000] text-[13px] leading-[14px] ">
               Shop now
             </button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#E3B522]/10  w-full h-[318px] ">
+        <div className="flex gap-24 justify-center items-center h-full">
+          <div>
+            <Image src="/next.svg" height={100} width={100} />
+            <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
+              Free Shipping
+            </h1>
+            <p className="text-[#424242] text-[1rem] leading-6 ">Free Shipping for order above $200</p>
+          </div>
+          <div>
+            <Image src="/next.svg" height={100} width={100} />
+            <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
+              Volunter
+            </h1>
+            <p className="text-[#424242] text-[1rem] leading-6">Show an helping hand</p>
+          </div>
+          <div>
+            <Image src="/next.svg" height={100} width={100} />
+            <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
+              Donate
+            </h1>
+            <p className="text-[#424242] text-[1rem] leading-6">Support the cause</p>
+          </div>
+          <div>
+            <Image src="/next.svg" height={100} width={100} />
+            <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
+              Online Support
+            </h1>
+            <p className="text-[#424242] text-[1rem] leading-6">24hrs a day 7 Days a week</p>
           </div>
         </div>
       </section>
