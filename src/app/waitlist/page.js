@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Footer from "../components/Footer";
 export default function page() {
   return (
     <section className="relative">
@@ -71,13 +72,19 @@ export default function page() {
           </button>
         </form>
       </div>
-      <div className="pb-24 absolute right-8">
-        <h1 className="font-semibold  text-[20px] leading-7  w-[250px] right-11 absolute bottom-[64px] text-[#6E6363] ">452 others just joined</h1>
+      <div className="pb-24 absolute right-8 ">
+        <h1 className="font-semibold  text-[20px] leading-7  w-[250px] right-11 absolute bottom-[64px] text-[#6E6363] ">
+          452 others just joined
+        </h1>
         <div className=" right-0  border-[#FFFFFF]  rounded-full absolute w-[36px] h-[36px] border-[3px] bg-[#D9D9D9]"></div>
         <div className=" right-3  border-[#FFFFFF]  rounded-full absolute w-[36px] h-[36px] border-[3px] bg-[#D9D9D9]"></div>
         <div className=" right-6  border-[#FFFFFF]  rounded-full absolute w-[36px] h-[36px] border-[3px] bg-[#D9D9D9]"></div>
         <div className=" right-9  border-[#FFFFFF]  rounded-full absolute w-[36px] h-[36px] border-[3px] bg-[#D9D9D9]"></div>
         <div className=" right-12 border-[#FFFFFF]   rounded-full absolute w-[36px] h-[36px] border-[3px] bg-[#D9D9D9]"></div>
+      </div>
+      <div className="pt-24">
+       
+        <Footer />
       </div>
     </section>
   );

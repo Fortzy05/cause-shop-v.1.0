@@ -80,7 +80,7 @@ export default function ShoppingpageHighlight() {
         <div className="flex gap-20 justify-center items-center h-full">
           <Image
             className="shadow-sm "
-            src="/rectangle 1344.svg"
+            src="/rectangle1344.svg"
             height={399}
             width={624}
             alt="culture attire"
@@ -100,35 +100,72 @@ export default function ShoppingpageHighlight() {
           </div>
         </div>
       </section>
-      <section className="bg-[#E3B522]/10  w-full h-[318px] ">
-        <div className="flex gap-24 justify-center items-center h-full">
+      <section>
+        <div className="flex items-center gap-24 py-[80px] ">
+          <div className="pl-[105px]  mb-8">
+            <h1 className="text-[#00A859] font-semibold text-[2rem] leading-10 ">
+              Shop African Food
+            </h1>
+            <p className="text-[1rem] mt-8 leading-6 text-[#424242] w-[329px]">
+              Want to have a taste of what Africa is all about, why not try
+              African's special food
+            </p>
+            <button className="mt-8  border-[#000000] px-5 py-[6px] border-[1px] rounded-[50px]">
+              Shop now
+            </button>
+          </div>
           <div>
-            <Image src="/next.svg" height={100} width={100} alt="" />
+            <Image src="/Group 73.svg" height={300} width={751.56} alt="  " />
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#E3B522]/10  w-full h-[318px] ">
+        <div className="flex gap-24 items-center justify-center h-full">
+          <div className="items-center flex flex-col">
+            <Image
+              src="/la_shipping-fast.svg"
+              height={100}
+              width={100}
+              alt=""
+            />
             <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
               Free Shipping
             </h1>
-            <p className="text-[#424242] text-[1rem] leading-6 ">Free Shipping for order above $200</p>
+            <p className="text-[#424242] text-[1rem] leading-6 ">
+              Free Shipping for order above $200
+            </p>
           </div>
-          <div>
-            <Image src="/next.svg" height={100} width={100} alt="" />
+          <div className="items-center flex flex-col">
+            <Image
+              src="/material-symbols-light_volunteer-activism-outline.svg"
+              height={100}
+              width={100}
+              alt=""
+            />
             <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
               Volunter
             </h1>
-            <p className="text-[#424242] text-[1rem] leading-6">Show an helping hand</p>
+            <p className="text-[#424242] text-[1rem] leading-6">
+              Show an helping hand
+            </p>
           </div>
-          <div>
-            <Image src="/next.svg" height={100} width={100} alt="" />
+          <div className="items-center flex flex-col">
+            <Image src="/la_donate.svg" height={100} width={100} alt="" />
             <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
               Donate
             </h1>
-            <p className="text-[#424242] text-[1rem] leading-6">Support the cause</p>
+            <p className="text-[#424242] text-[1rem] leading-6">
+              Support the cause
+            </p>
           </div>
-          <div>
-            <Image src="/next.svg" height={100} width={100} alt="" />
+          <div className="items-center flex flex-col">
+            <Image src="/token_chat.svg" height={100} width={100} alt="" />
             <h1 className="mt-4 font-bold mb-2 text-[#424242] text-[20px]">
               Online Support
             </h1>
-            <p className="text-[#424242] text-[1rem] leading-6">24hrs a day 7 Days a week</p>
+            <p className="text-[#424242] text-[1rem] leading-6">
+              24hrs a day 7 Days a week
+            </p>
           </div>
         </div>
       </section>
