@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assets/menu-nav-logo-1.png";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -9,20 +9,40 @@ import Link from "next/link";
 export default function Header() {
   const pathname = usePathname();
   const excludedRoutes = ["/login", "/sign-in"];
-  const showHeader = !excludedRoutes.includes(pathname.pathname);
+  const showHeader = !excludedRoutes.includes(pathname);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleItemClick = (index) => {
-    setActiveIndex(index);
-  };
+const handleItemClick = (index) => {
+  setActiveIndex(index);
+};
+  useEffect(() => {
+    
+    switch (pathname) {
+      case "/":
+        setActiveIndex(0);
+        break;
+      case "/shop-now":
+        setActiveIndex(1);
+        break;
+      case "/volunteer":
+        setActiveIndex(2);
+        break;
+      case "/contact-us":
+        setActiveIndex(3);
+        break;
+      default:
+        setActiveIndex(-1);
+    }
+  }, [pathname]);
 
   if (!showHeader) {
     return null;
   }
+
   return (
     <section className="w-full h-[139px] py-2">
       <div className="flex items-center justify-between mr-3 md:mr-24 h-[52px]">
-        <Link href="waitlist">
+        <Link href="/waitlist">
           <div className="bg-white flex items-center gap-2 ml-2 md:ml-24">
             <Image src={logo} width={50} height={52.94} alt="" />
             <h1 className="md:block hidden"> KGF CAUSE SHOP</h1>
@@ -54,8 +74,9 @@ export default function Header() {
             }`}
             onClick={() => handleItemClick(0)}
           >
-            Home
+            <Link href="/">Home</Link>
           </li>
+
           <li
             className={` ${
               activeIndex === 1
@@ -64,8 +85,9 @@ export default function Header() {
             }`}
             onClick={() => handleItemClick(1)}
           >
-            Shop
+            <Link href="/shop-now">Shop</Link>
           </li>
+
           <li
             className={` ${
               activeIndex === 2
