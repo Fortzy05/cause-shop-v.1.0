@@ -51,18 +51,18 @@ export default function Page() {
       </div>
 
       {isSubmitted ? (
-        <div className="p-24 my-24">
+        <div className="p-24 my-8">
           <div className="flex justify-center items-center">
-            <div className="w-[200px] h-[200px] bg-green-300 rounded-full relative flex justify-center items-center ">
-              <div className="absolute w-[150px] h-[150px] bg-green-100 rounded-full">
-                <div className="flex justify-center items-center h-full">
+            <div className="w-[300px] h-[300px] bg-[#94D9B9]/15 rounded-full relative flex justify-center items-center ">
+              <div className="absolute w-[200px] h-[200px] bg-[#94D9B9]/45 rounded-full">
+                <div className="flex h-full mx-auto justify-center items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill=" transparent"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="white"
-                    className="size-[89px] bg-green-700 rounded-full"
+                    className="size-[89.25px] bg-[#00A859] rounded-full"
                   >
                     <path
                       strokeLinecap="round"
@@ -81,7 +81,7 @@ export default function Page() {
             You have been successfully added to the waiting list
           </h1>
           <Link className="h-full flex" href="/">
-            <button className="px-5 py-2.5 bg-yellow-500 rounded-[50px] text-[#f1f1f1f1] text-[20px] mt-11 mx-auto">
+            <button className="px-5 py-2.5 bg-[#E3B522] rounded-[50px] text-[#f1f1f1f1] text-[20px] mt-11 mx-auto">
               Go to the KGF Cause Shop
             </button>
           </Link>
