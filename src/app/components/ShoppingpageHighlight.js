@@ -108,7 +108,7 @@ export default function ShoppingpageHighlight() {
             </h1>
             <p className="text-[1rem] mt-8 leading-6 text-[#424242] w-[329px]">
               Want to have a taste of what Africa is all about, why not try
-              African's special food
+              African&apos;s special food
             </p>
             <button className="mt-8  border-[#000000] px-5 py-[6px] border-[1px] rounded-[50px]">
               Shop now

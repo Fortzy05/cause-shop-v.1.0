@@ -97,10 +97,10 @@ export default function page() {
             </h1>
           </div>
           <div className="relative flex justify-center">
-            
-            <div className="absolute w-[179px] h-[43px]   p-2.5 bg-[#14BDE3]">
+            <Image src="/Rectangle 1440.svg" height={758} width={259} />
+            <div className="absolute top-14 w-[179px] h-[43px]   p-2.5 bg-[#14BDE3]">
               <h1 className="text-center leading-[22.5px] text-[#424242] text-[18px]">
-                Women's Flash Sale
+                Women&apos;s Flash Sale
               </h1>
             </div>
           </div>

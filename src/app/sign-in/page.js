@@ -36,7 +36,7 @@ export default function page() {
             />
             <h1 className="text-white z-10">KGF CAUSE SHOP</h1>
           </div>
-          <Image src="/Frame 426 (1).svg" height={743} width={510} />
+          <Image src="/Frame 426 (1).svg" height={743} width={510} alt=""/>
         </div>
         <div className="w-[510px] h-[743px] flex flex-col items-center gap-3 mx-auto pt-[105px]">
           <h1 className="text-[#00A859] w-[700px] text-center text-[48px] leading-[64px] font-bold">
