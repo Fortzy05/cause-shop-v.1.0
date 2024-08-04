@@ -1,8 +1,15 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 export default function page() {
+    const [text, setText] = useState("Cloth")
+
+    function handleTestChange(newText){
+        setText(newText)
+    }
   return (
     <section>
       <Header />
@@ -83,17 +90,27 @@ export default function page() {
             <input
               className="w-[228px] text-[#424242] text-[20px] leading-[22.5px] font-bold p-2.5 text-center bg-[#FFFFFF]"
               type="text"
-              value="Cloth"
+              value={text}
+              readOnly
             />
 
-            <h1 className="mb-8 text-[#878181] text-[20px] leading-[22.5px] mt-4">
+            <h1
+              onClick={() => handleTestChange("Food")}
+              className="mb-8 text-[#878181] text-[20px] leading-[22.5px] mt-4"
+            >
               Food
             </h1>
-            <h1 className="mb-8 text-[#878181] text-[20px] leading-[22.5px]">
+            <h1
+              onClick={() => handleTestChange("Bags")}
+              className="mb-8 text-[#878181] text-[20px] leading-[22.5px]"
+            >
               Bags
             </h1>
-            <h1 className="mb-8 text-[#878181] text-[20px] leading-[22.5px]">
-              Foot Wear
+            <h1
+              onClick={() => handleTestChange("Foot Wears")}
+              className="mb-8 text-[#878181] text-[20px] leading-[22.5px]"
+            >
+              Foot Wears
             </h1>
           </div>
           <div className="relative flex justify-center">
@@ -104,6 +121,9 @@ export default function page() {
               </h1>
             </div>
           </div>
+        </div>
+        <div className="w-[954px] h-[1754px] bg-[#F7F9F9]">
+          <div></div>
         </div>
       </section>
       <Footer />
