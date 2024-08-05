@@ -16,7 +16,6 @@ const handleItemClick = (index) => {
   setActiveIndex(index);
 };
   useEffect(() => {
-    
     switch (pathname) {
       case "/":
         setActiveIndex(0);

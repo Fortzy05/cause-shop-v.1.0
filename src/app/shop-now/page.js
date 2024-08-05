@@ -1,15 +1,19 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import shop from "../components/shop.json";
 export default function page() {
-    const [text, setText] = useState("Cloth")
-
-    function handleTestChange(newText){
-        setText(newText)
-    }
+  const [text, setText] = useState("All Categories");
+  const [category, setCategory] = useState(" What's New In");
+  function handleTextChange(newText) {
+    setText(newText);
+  }
+  function handleCategoryChange(newCategory) {
+    setCategory(newCategory);
+  }
   return (
     <section>
       <Header />
@@ -78,12 +82,18 @@ export default function page() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="flex gap-4">
         <div className="w-[308px] ml-8 h-[1237px] bg-[#F7F9F9] mt-8">
           <h1 className="pl-6 pt-4 text-[#000000] text-[2rem] font-bold leading-10">
-            Cloth
+            {category}
           </h1>
-          <h4 className="pl-6 mb-4 pt-6 text-[20px] leading-[22.5px] text-[#878181]">
+          <h4
+            onClick={() => {
+              handleCategoryChange("What's New In");
+              handleTextChange("All Categories");
+            }}
+            className="pl-6 cursor-pointer mb-4 pt-6 text-[20px] leading-[22.5px] text-[#878181]"
+          >
             All Categories
           </h4>
           <div className="pl-6 cursor-pointer">
@@ -93,21 +103,38 @@ export default function page() {
               value={text}
               readOnly
             />
-
             <h1
-              onClick={() => handleTestChange("Food")}
+              onClick={() => {
+                handleTextChange("Cloth");
+                handleCategoryChange("Cloth");
+              }}
+              className="mb-8 text-[#878181] text-[20px] leading-[22.5px] mt-4"
+            >
+              Cloth
+            </h1>
+            <h1
+              onClick={() => {
+                handleTextChange("Food");
+                handleCategoryChange("Food");
+              }}
               className="mb-8 text-[#878181] text-[20px] leading-[22.5px] mt-4"
             >
               Food
             </h1>
             <h1
-              onClick={() => handleTestChange("Bags")}
+              onClick={() => {
+                handleTextChange("Bags");
+                handleCategoryChange("Bags");
+              }}
               className="mb-8 text-[#878181] text-[20px] leading-[22.5px]"
             >
               Bags
             </h1>
             <h1
-              onClick={() => handleTestChange("Foot Wears")}
+              onClick={() => {
+                handleTextChange("Foot Wears");
+                handleCategoryChange("Foot Wears");
+              }}
               className="mb-8 text-[#878181] text-[20px] leading-[22.5px]"
             >
               Foot Wears
@@ -122,11 +149,73 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="w-[954px] h-[1754px] bg-[#F7F9F9]">
-          <div></div>
+        <div className="w-[1120px] h-[1178px] mb-24 mt-24 bg-[#F7F9F9]">
+          <div className="flex gap-4 pl-[26px] py-[35px]  items-center">
+            <button className="bg-[#FFFFFF] px-5 py-2.5 rounded-[20px] shadow-md ">
+              Sort
+            </button>
+            <button className="bg-[#FFFFFF] px-5 py-2.5  rounded-[20px] shadow-md ">
+              Filter
+            </button>
+            <div className="w-[510px]  h-[40px] relative pl-[380px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#878181"
+                className="w-6 h-6 absolute top-2.5 left-[400px]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <input
+                placeholder="Search all items"
+                className="shadow-md placeholder:pl-14 text-[#D9D9D9] w-[510px] h-[40px] bg-[#ffffff] rounded-[30px]"
+                type="search"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-1 py-5 px-2">
+            {shop.map((item, index) => {
+              return (
+                <div key={item.id} className="">
+                  <div className="">
+                    <div className="w-[360px] flex justify-center items-center h-[390px] bg-[#D9D9D9]">
+                      <Image
+                        src={item.image}
+                        height={290}
+                        width={280}
+                        alt={item.name}
+                        className=""
+                      />
+                    </div>
+                    <h1 className="text-[#000000] text-[24px] leading-8">
+                      {item.name}
+                    </h1>
+                    <p className="text-[#ABABAB] text-[1rem] leading-6">
+                      {item.description}
+                    </p>
+                    <div>
+                      <h1 className="text-[#000000] text-[24px] leading-8">
+                        {item.price}
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
       <Footer />
     </section>
   );
 }
+
+// box-shadow: 0px 4px 4px 0px #00000040;
+// box-shadow: 0px 4px 4px 0px #00000040;
