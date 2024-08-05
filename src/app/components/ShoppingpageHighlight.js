@@ -80,7 +80,7 @@ export default function ShoppingpageHighlight() {
         <div className="flex gap-20 justify-center items-center h-full">
           <Image
             className="shadow-sm "
-            src="/rectangle1344.svg"
+            src="/Rectangle1344.svg"
             height={399}
             width={624}
             alt="culture attire"
