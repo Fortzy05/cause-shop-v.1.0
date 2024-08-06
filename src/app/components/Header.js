@@ -105,7 +105,7 @@ const handleItemClick = (index) => {
             }`}
             onClick={() => handleItemClick(3)}
           >
-            Contact Us
+            <Link href="/contact-us">Contact Us</Link>
           </li>
           <button className="bg-[#E3B522] text-sm px-5 py-2.5 text-white rounded-[50px]">
             Donate Money

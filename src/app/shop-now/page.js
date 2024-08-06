@@ -82,8 +82,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="flex gap-4">
-        <div className="w-[308px] ml-8 h-[1237px] bg-[#F7F9F9] mt-8">
+      <section className="flex gap-4 w-full px-4">
+        <div className=" w-1/4 ml-8 h-[1237px] bg-[#F7F9F9] mt-8">
           <h1 className="pl-6 pt-4 text-[#000000] text-[2rem] font-bold leading-10">
             {category}
           </h1>
@@ -149,7 +149,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="w-[1120px] h-[1178px] mb-24 mt-24 bg-[#F7F9F9]">
+        <div className="w-3/4 h-[1178px]  mb-24 mt-24 bg-[#F7F9F9]">
           <div className="flex gap-4 pl-[26px] py-[35px]  items-center">
             <button className="bg-[#FFFFFF] px-5 py-2.5 rounded-[20px] shadow-md ">
               Sort
@@ -157,14 +157,14 @@ export default function Page() {
             <button className="bg-[#FFFFFF] px-5 py-2.5  rounded-[20px] shadow-md ">
               Filter
             </button>
-            <div className="w-[510px]  h-[40px] relative pl-[380px]">
+            <div className="w-[510px]  h-[40px] relative pl-[300px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="#878181"
-                className="w-6 h-6 absolute top-2.5 left-[400px]"
+                className="w-6 h-6 absolute top-2.5 left-[320px]"
               >
                 <path
                   stroke-linecap="round"
@@ -180,16 +180,16 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-1 py-5 px-2">
+          <div className="grid grid-cols-3 gap-1 px-[50px]">
             {shop.map((item, index) => {
               return (
                 <div key={item.id} className="">
                   <div className="">
-                    <div className="w-[360px] flex justify-center items-center h-[390px] bg-[#D9D9D9]">
+                    <div className="w-[300px] flex justify-center items-center h-[360px] bg-[#D9D9D9]">
                       <Image
                         src={item.image}
                         height={290}
-                        width={280}
+                        width={260}
                         alt={item.name}
                         className=""
                       />
@@ -201,7 +201,7 @@ export default function Page() {
                       {item.description}
                     </p>
                     <div>
-                      <h1 className="text-[#000000] text-[24px] leading-8">
+                      <h1 className="text-[#000000] text-[24px] leading-8 mb-11">
                         {item.price}
                       </h1>
                     </div>
