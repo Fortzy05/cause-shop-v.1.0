@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1",
+    "name": "Lorem ipsum dolor",
+    "description": "Lorem ipsum dolor",
+    "price": "$50.00",
+    "image": "/Rectangle 1472.svg"
+  },
+  {
+    "id": "2",
+    "name": "Lorem ipsum dolor",
+    "description": "Lorem ipsum dolor",
+    "price": "$50.00",
+    "image": "/Rectangle 1433.svg"
+  },
+  {
+    "id": "3",
+    "name": "Lorem ipsum dolor",
+    "description": "Lorem ipsum dolor",
+    "price": "$50.00",
+    "image": "/Rectangle 1471.svg"
+  },
+  {
+    "id": "4",
+    "name": "Lorem ipsum dolor",
+    "description": "Lorem ipsum dolor",
+    "price": "$50.00",
+    "image": "/Rectangle 1433.svg"
+  }
+  
+]

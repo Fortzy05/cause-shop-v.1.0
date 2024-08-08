@@ -12,6 +12,8 @@ import { useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { contactSchema } from "../components/schema";
+import Recommendation from "../components/Recommendation";
+import product from "../components/product.json"
 export default function Page() {
    const initialValues = {
      firstName: "",
@@ -66,7 +68,6 @@ export default function Page() {
           </p>
         </div>
       </div>
-
       <section className="bg-[#EFEFEF]  w-full h-[168px] ">
         <div className="flex gap-8 items-center justify-center h-full">
           <div className="items-center flex flex-col gap-2">
@@ -269,7 +270,7 @@ export default function Page() {
                   )}
                 </div>
 
-                <div className="flex justify-end mt-6">
+                <div className="flex justify-end mt-24">
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -285,6 +286,42 @@ export default function Page() {
         </div>
       </section>
       <ToastContainer />
+      <section>
+        <h1 className="text-[#000000] mb-8 pl-[120px] font-bold text-[2rem] leading-10">
+          Best Selling Products
+        </h1>
+        <div className="grid grid-cols-4 gap-1 px-[120px]">
+          {product.map((item, index) => {
+            return (
+              <div key={item.id} className="">
+                <div className="">
+                  <div className="w-[300px] flex justify-center items-center h-[360px] bg-[#D9D9D9]">
+                    <Image
+                      src={item.image}
+                      height={290}
+                      width={260}
+                      alt={item.name}
+                      className=""
+                    />
+                  </div>
+                  <h1 className="text-[#000000] text-[24px] leading-8">
+                    {item.name}
+                  </h1>
+                  <p className="text-[#ABABAB] text-[1rem] leading-6">
+                    {item.description}
+                  </p>
+                  <div>
+                    <h1 className="text-[#000000] text-[24px] leading-8 mb-11">
+                      {item.price}
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <Recommendation />
       <Footer />
     </section>
   );

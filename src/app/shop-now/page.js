@@ -5,6 +5,7 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import shop from "../components/shop.json";
+import Recommendation from "../components/Recommendation";
 export default function Page() {
   const [text, setText] = useState("All Categories");
   const [category, setCategory] = useState(" What's New In");
@@ -212,6 +213,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <Recommendation />
       <Footer />
     </section>
   );
