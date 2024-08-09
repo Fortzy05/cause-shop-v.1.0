@@ -5,6 +5,7 @@ import facebookIcon from "../../assets/jam_facebook.svg";
 
 import twitterIcon from "../../assets/prime_twitter.svg";
 import googleIcon from "../../assets/prime_google.svg";
+import Link from "next/link";
 export default function page() {
   return (
     <section className="relative mx-auto shadow-lg h-screen w-[1400px] ">
@@ -20,7 +21,7 @@ export default function page() {
                 <h4 className="my-1">You already have an account?</h4>
                 <h4 className="py-1"> sign in</h4>
                 <button className="rounded-[50px] px-5 py-1.5 mt-2 text-[#FFFFFF]/80  border-[#FFFFFF]/70 border-2">
-                  sign in
+                  <Link href="/sign-in">sign in</Link>
                 </button>
               </div>
             </div>
@@ -134,7 +135,7 @@ export default function page() {
                 />
               </div>
               <button className="bg-[#E3B522] mt-2 mx-auto leading-5 text-[#FFFFFF] text-[14px] px-5 py-2.5 rounded-[50px]">
-                sign up
+                Sign up
               </button>
             </div>
           </form>

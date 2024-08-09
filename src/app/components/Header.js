@@ -50,14 +50,14 @@ const handleItemClick = (index) => {
 
         <div className="flex items-center gap-2">
           <div className=" md:p-2.5">
-            <Link href="/login">
+            <Link href="/sign-in">
               <button className="bg-[#424242] w-20 h-[30px] text-white rounded-[10px]">
                 Login
               </button>
             </Link>
           </div>
           <div className="md:p-2.5">
-            <Link href="/sign-in">
+            <Link href="/sign-up">
               <button>Sign Up</button>
             </Link>
           </div>

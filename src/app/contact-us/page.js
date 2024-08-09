@@ -320,6 +320,11 @@ export default function Page() {
             );
           })}
         </div>
+        <div className="w-[84px] h-[38px] mx-auto">
+          <button className=" text-[14px] leading-[18px] px-5 py-2.5 rounded-[50px] border-[1px] border-[#000000]">
+            See all
+          </button>
+        </div>
       </section>
       <Recommendation />
       <Footer />

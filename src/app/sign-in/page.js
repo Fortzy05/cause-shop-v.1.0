@@ -5,6 +5,7 @@ import facebookIcon from "../../assets/jam_facebook.svg";
 
 import twitterIcon from "../../assets/prime_twitter.svg";
 import googleIcon from "../../assets/prime_google.svg";
+import Link from "next/link";
 export default function page() {
   return (
     <section className="relative mx-auto shadow-lg h-screen w-[1400px] ">
@@ -22,7 +23,7 @@ export default function page() {
                 </h4>
 
                 <button className="rounded-[50px] px-5 py-1.5 mt-2 text-[#FFFFFF]/80  border-[#FFFFFF]/70 border-2">
-                  sign in
+                  <Link href="/sign-up">sign up</Link>
                 </button>
               </div>
             </div>
@@ -36,7 +37,7 @@ export default function page() {
             />
             <h1 className="text-white z-10">KGF CAUSE SHOP</h1>
           </div>
-          <Image src="/Frame 426 (1).svg" height={743} width={510} alt=""/>
+          <Image src="/Frame 426 (1).svg" height={743} width={510} alt="" />
         </div>
         <div className="w-[510px] h-[743px] flex flex-col items-center gap-3 mx-auto pt-[105px]">
           <h1 className="text-[#00A859] w-[700px] text-center text-[48px] leading-[64px] font-bold">
@@ -122,7 +123,7 @@ export default function page() {
                 />
               </div>
               <button className="bg-[#E3B522] mt-2 mx-auto leading-5 text-[#FFFFFF] text-[14px] px-5 py-2.5 rounded-[50px]">
-                sign up
+                Sign in
               </button>
               <h4 className="mx-auto flex font-normal my-2 text-[#878181]">
                 Forgot Password?
