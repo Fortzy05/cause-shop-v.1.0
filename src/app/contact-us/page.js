@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Header from "../components/Header";
@@ -13,41 +13,42 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { contactSchema } from "../components/schema";
 import Recommendation from "../components/Recommendation";
-import product from "../components/product.json"
-export default function Page() {
-   const initialValues = {
-     firstName: "",
-     lastName: "",
-     email: "",
-     number: "",
-     message: "",
-   };
+import BestSelling from "../components/BestSelling";
 
-   const {
-     values,
-     handleBlur,
-     handleChange,
-     handleSubmit,
-     errors,
-     touched,
-     isSubmitting,
-   } = useFormik({
-     initialValues,
-     validationSchema: contactSchema,
-     onSubmit: (values, actions) => {
-       console.log(values);
-       actions.resetForm();
-       toast.success("❤️form summitted successfully!", {
-         position: "top-right",
-         autoClose: 5000,
-         hideProgressBar: false,
-         closeOnClick: true,
-         pauseOnHover: true,
-         draggable: true,
-         progress: undefined,
-       });
-     },
-   });
+export default function Page() {
+  const initialValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    number: "",
+    message: "",
+  };
+
+  const {
+    values,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    errors,
+    touched,
+    isSubmitting,
+  } = useFormik({
+    initialValues,
+    validationSchema: contactSchema,
+    onSubmit: (values, actions) => {
+      console.log(values);
+      actions.resetForm();
+      toast.success("❤️form summitted successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    },
+  });
   return (
     <section>
       <Header />
@@ -137,14 +138,14 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="flex items-center mb-20 justify-center mt-8 ">
-        <div className="w-full max-w-[1000px]  mx-auto  ">
-          <h1 className="text-center text-[30px] text-[#1E1E1E] font-bold p-8">
+      <section className="mb-24  mt-24 ">
+        
+          <h1 className="text-center mb-8 text-[30px] text-[#1E1E1E] font-bold p-8">
             SEND A MESSAGE
           </h1>
-          <div className="bg-[#F7F9F9] w-[1128px] h-[800px] flex justify-center">
+          <div className="bg-[#F7F9F9] w-[1128px] h-[800px] flex justify-center mx-auto ">
             <form
-              className=" flex items-center  flex-col gap-10 pt-8"
+              className=" flex flex-col gap-10 pt-8"
               onSubmit={handleSubmit}
             >
               <div className="flex items-center gap-5 ">
@@ -283,49 +284,10 @@ export default function Page() {
               </div>
             </form>
           </div>
-        </div>
+        
       </section>
       <ToastContainer />
-      <section>
-        <h1 className="text-[#000000] mb-8 pl-[120px] font-bold text-[2rem] leading-10">
-          Best Selling Products
-        </h1>
-        <div className="grid grid-cols-4 gap-1 px-[120px]">
-          {product.map((item, index) => {
-            return (
-              <div key={item.id} className="">
-                <div className="">
-                  <div className="w-[300px] flex justify-center items-center h-[360px] bg-[#D9D9D9]">
-                    <Image
-                      src={item.image}
-                      height={290}
-                      width={260}
-                      alt={item.name}
-                      className=""
-                    />
-                  </div>
-                  <h1 className="text-[#000000] text-[24px] leading-8">
-                    {item.name}
-                  </h1>
-                  <p className="text-[#ABABAB] text-[1rem] leading-6">
-                    {item.description}
-                  </p>
-                  <div>
-                    <h1 className="text-[#000000] text-[24px] leading-8 mb-11">
-                      {item.price}
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="flex justify-center">
-          <button className=" text-[14px] leading-[18px] px-5 py-2.5 rounded-[50px] border-[1px] border-[#000000]">
-            See all
-          </button>
-        </div>
-      </section>
+      <BestSelling  />
       <Recommendation />
       <Footer />
     </section>

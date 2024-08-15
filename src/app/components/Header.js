@@ -90,12 +90,12 @@ const handleItemClick = (index) => {
           <li
             className={` ${
               activeIndex === 2
-                ? "border-b-4 text-[#000000] border-b-[#E3B522]"
+                ? "border-b-4 text-[#000000] border-b-[#E3B522] "
                 : ""
             }`}
             onClick={() => handleItemClick(2)}
           >
-            Volunteer
+            <Link href="/volunteer"> Volunteer</Link>
           </li>
           <li
             className={` ${
