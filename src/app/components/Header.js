@@ -41,7 +41,7 @@ const handleItemClick = (index) => {
   return (
     <section className="w-full h-[139px] py-2">
       <div className="flex items-center justify-between mr-3 md:mr-24 h-[52px]">
-        <Link href="/waitlist">
+        <Link href="/">
           <div className="bg-white flex items-center gap-2 ml-2 md:ml-24">
             <Image src={logo} width={50} height={52.94} alt="" />
             <h1 className="md:block hidden"> KGF CAUSE SHOP</h1>

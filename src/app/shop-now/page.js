@@ -8,17 +8,15 @@ import shop from "../components/shop.json";
 import Recommendation from "../components/Recommendation";
 import BestSelling from "../components/BestSelling";
 export default function Page() {
-
-
   const [text, setText] = useState("All Categories");
 
   const [category, setCategory] = useState(" What's New In");
 
   const [shopItems, setShopItems] = useState(
-    shop.map((item) => ({ ...item, filled: false, isActive: false }))
+    shop.map((item) => ({ ...item, filled: false, activeSvg: false }))
   );
-  
-  const [activeSvg, setActiveSvg] = useState(null); 
+
+  // const [activeSvg, setActiveSvg] = useState(false);
 
   function handleTextChange(newText) {
     setText(newText);
@@ -27,21 +25,21 @@ export default function Page() {
     setCategory(newCategory);
   }
 
- const handleSvgClick = (id) => {
-   setShopItems((prevItems) =>
-     prevItems.map((item) =>
-       item.id === id ? { ...item, isActive: !item.isActive } : item
-     )
-   );
- };
-
-  const toggleFill = (id) => {
+  const handleSvgToggle = (id, type) => {
     setShopItems((prevItems) =>
       prevItems.map((item) =>
-        item.id === id ? { ...item, filled: !item.filled } : item
+        item.id === id ? { ...item, [type]: !item[type] } : item
       )
     );
   };
+
+  // const toggleFill = (id) => {
+  //   setShopItems((prevItems) =>
+  //     prevItems.map((item) =>
+  //       item.id === id ? { ...item, filled: !item.filled } : item
+  //     )
+  //   );
+  // };
   return (
     <section>
       <Header />
@@ -186,7 +184,7 @@ export default function Page() {
           <div className="relative flex justify-center">
             <Image src="/Rectangle 1440.svg" height={758} width={259} />
             <div className="absolute top-14 w-[179px] h-[43px]   p-2.5 bg-[#14BDE3]">
-              <h1 className="text-center leading-[22.5px] text-[#424242] text-[18px]">
+              <h1 className="text-center leading-[22.5px] text-[#424242] text-[16px]">
                 Women&apos;s Flash Sale
               </h1>
             </div>
@@ -254,97 +252,85 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-3 gap-1 px-[50px]">
-            {shopItems.map((item) => {
-               
-              return (
-                <div key={item.id} className="">
-                  <div className="relative">
-                    <div className="bg-green-600 w-[42px] h-[18px] text-[13px] text-center text-[#ffffff] absolute top-10 left-10">
-                      New
-                    </div>
-                    <div className="w-[300px] mx-auto flex justify-center pt-8 items-start h-[360px] bg-[#D9D9D9]">
-                      <Image
-                        src={item.image}
-                        height={290}
-                        width={260}
-                        alt={item.name}
-                        className=""
-                      />
-                    </div>
-                    <div className="px-4">
-                      
-                      <h1 className="text-[#000000] text-[24px] leading-8">
-                        {item.name}
-                      </h1>
-                      <p className="text-[#ABABAB] text-[1rem] leading-6">
-                        {item.description}
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-between px-4 mb-8">
-                      <h1 className="text-[#000000] text-[24px] leading-8">
-                        {item.price}
-                      </h1>
-                      <div className="flex space-x-2">
-                        <span onClick={() => handleSvgClick(item.id)}>
-                          {activeSvg ? (
-                            // <svg
-                            //   xmlns="http://www.w3.org/2000/svg"
-                            //   fill="none"
-                            //   viewBox="0 0 24 24"
-                            //   strokeWidth={1.5}
-                            //   stroke="currentColor"
-                            //   className="size-6 cursor-pointer"
-                            // >
-                            //   <path
-                            //     strokeLinecap="round"
-                            //     strokeLinejoin="round"
-                            //     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                            //   />
-                            // </svg>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              height="24px"
-                              viewBox="0 -960 960 960"
-                              width="24px"
-                              fill="#5f6368"
-                            >
-                              <path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-                            </svg>
-                          ) : (
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              height="24px"
-                              viewBox="0 -960 960 960"
-                              width="24px"
-                              fill="#5f6368"
-                              stroke="green"
-                            >
-                              <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-                            </svg>
-                          )}
-                        </span>
-                        <span onClick={() => toggleFill(item.id)}>
+            {shopItems.map((item) => (
+              <div key={item.id} className="">
+                <div className="relative">
+                  <div className="bg-green-600 w-[42px] h-[18px] text-[13px] text-center text-[#ffffff] absolute top-10 left-10">
+                    New
+                  </div>
+                  <div className="w-[300px] mx-auto flex justify-center pt-8 items-start h-[360px] bg-[#D9D9D9]">
+                    <Image
+                      src={item.image}
+                      height={290}
+                      width={260}
+                      alt={item.name}
+                    />
+                  </div>
+                  <div className="px-4">
+                    <h1 className="text-[#000000] text-[24px] leading-8">
+                      {item.name}
+                    </h1>
+                    <p className="text-[#ABABAB] text-[1rem] leading-6">
+                      {item.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between px-4 mb-8">
+                    <h1 className="text-[#000000] text-[24px] leading-8">
+                      {item.price}
+                    </h1>
+                    <div className="flex space-x-2 cursor-pointer">
+                      <span
+                        onClick={() => handleSvgToggle(item.id, "activeSvg")}
+                      >
+                        {item.activeSvg ? (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1.5}
-                            fill={item.filled ? "#F44336" : "none"}
-                            stroke={item.filled ? "none" : "currentColor"}
-                            className=" size-6 ease-in-out cursor-pointer duration-200 "
+                            height="24px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="#00A859"
+                            // fill={item.filled ? "#00A859" : "none"}
+                            // stroke={item.filled ? "none" : "#00A859"}
+                            stroke="none"
+                            className="size-6 ease-in-out cursor-pointer duration-200 "
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                            />
+                            <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
                           </svg>
-                        </span>
-                      </div>
+                        ) : (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            // fill={item.filled ? "" : ""}
+                            fill="#5f6368"
+                            stroke="green"
+                          >
+                            <path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                          </svg>
+                        )}
+                      </span>
+                      <span onClick={() => handleSvgToggle(item.id, "filled")}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          fill={item.filled ? "#F44336" : "none"}
+                          stroke={item.filled ? "none" : "currentColor"}
+                          className=" size-6 ease-in-out cursor-pointer duration-200 "
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                          />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
