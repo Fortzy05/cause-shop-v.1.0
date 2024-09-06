@@ -2,33 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  min-height: 100vh;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@layer base {
+  @font-face {
+    font-family: 'Calibri';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/Calibri.ttf) format('.ttf');
+  }
 }
+
+@layer base {
+  @font-face {
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https: //fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.inclined {
-  transform: skew(-20deg);
-  /* transform-origin: top right; */
-  
-
-}
-
-.inclined::after {
-  transform: skew(-20deg);
-
-
-
-
 }

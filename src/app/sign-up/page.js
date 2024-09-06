@@ -8,35 +8,50 @@ import googleIcon from "../../assets/prime_google.svg";
 import Link from "next/link";
 export default function page() {
   return (
-    <section className="relative mx-auto shadow-lg h-screen w-[1400px] ">
-      <div className="flex ">
-        <div className="flex w-[510px] h-screen items-center">
-          <div className=" absolute top-0 flex items-center gap-2">
-            <div className="bg-black/5 absolute inset-0 w-[510px] h-screen" />
-            <div className="absolute flex bg-black/50 rounded-[50px]  left-[55px] top-[197px]  h-[350px] w-[400px] items-center">
+    <section className="relative mx-auto h-screen w-full ">
+      <div className="flex">
+        <div className="flex bg-[#14BDE3] w-[510px] h-screen items-center">
+          <div className=" absolute top-0  flex items-center gap-2">
+            {/* <div className="bg-black/5 absolute inset-0 w-[510px] h-screen" /> */}
+            <div className="absolute flex  rounded-[50px]  left-[55px] top-[197px]  h-[350px] w-[400px] items-center">
               <div className="items-center flex mx-auto flex-col text-[#FFFFFF]/90 font-light">
-                <h1 className="text-[#00A859]  font-bold leading-[64px] text-[48px]">
+                <h1 className="text-[#ffffff]  font-Abhaya font-bold leading-[41px] text-[43px]">
                   Welcome Back!
                 </h1>
-                <h4 className="my-1">You already have an account?</h4>
-                <h4 className="py-1"> sign in</h4>
-                <button className="rounded-[50px] px-5 py-1.5 mt-2 text-[#FFFFFF]/80  border-[#FFFFFF]/70 border-2">
-                  <Link href="/sign-in">sign in</Link>
-                </button>
+                <h4 className="my-4 flex flex-col font-Inter text-[22px] leading-[30px] text-center">
+                  You already have an account?,
+                  <span className="text-center">sign in</span>
+                </h4>
+
+                <Link href="/sign-in">
+                  <button className="rounded-[50px] font-Inter uppercase px-10 py-3 mt-2 text-[#FFFFFF]/80  border-[#FFFFFF]/70 border-2">
+                    sign in
+                  </button>
+                </Link>
               </div>
             </div>
-            <Image className="z-10" src={logo} height={64} width={60} alt="" />
-            <h1 className="text-white z-10">KGF CAUSE SHOP</h1>
+            <div className="flex pt-5 pl-[33px] items-center gap-3">
+              <Image
+                className="z-10"
+                src={logo}
+                height={64}
+                width={60}
+                alt=""
+              />
+              <h1 className="text-white z-10 font-Abhaya">KGF CAUSE SHOP</h1>
+            </div>
           </div>
-          <Image src="/frame 426.svg" height={743} width={510} alt="" />
+          {/* <Image src="/frame 426.svg" height={743} width={510} alt="" /> */}
         </div>
         <div className="w-[510px] h-[743px] flex flex-col items-center gap-3 mx-auto pt-[105px]">
-          <h1 className="text-[#00A859] text-5xl font-bold">Create Account</h1>
-          <h4 className="text-center text-[16px] leading-10 font-normal">
+          <h1 className="text-[#14BDE3] text-[43px] leading-[41px] font-Abhaya font-bold">
+            Create Account
+          </h1>
+          <h4 className="text-center font-Inter text-[#878181] text-[16px] leading-10 font-normal">
             sign up with
           </h4>
           <div className="flex gap-4 mx-auto">
-            <div className="border-2  items-center flex rounded-full w-[50px] h-[50px]">
+            <div className="border-2 border-[#E3B5221A]  items-center flex rounded-full w-[50px] h-[50px]">
               <Image
                 className="mx-auto"
                 src={facebookIcon}
@@ -45,7 +60,7 @@ export default function page() {
                 alt=""
               />
             </div>
-            <div className="border-2  items-center flex rounded-full w-[50px] h-[50px]">
+            <div className="border-2 border-[#E3B5221A]  items-center flex rounded-full w-[50px] h-[50px]">
               <Image
                 className="mx-auto"
                 src={googleIcon}
@@ -54,7 +69,7 @@ export default function page() {
                 alt=""
               />
             </div>
-            <div className="border-2 rounded-full h-[50px] flex w-[50px]">
+            <div className="border-2 border-[#E3B5221A] rounded-full h-[50px] flex w-[50px]">
               <Image
                 className=" mx-auto"
                 src={twitterIcon}
@@ -64,7 +79,7 @@ export default function page() {
               />
             </div>
           </div>
-          <h4 className="text-center leading-10 font-normal text-[1rem]">
+          <h4 className="text-center text-[#878181] leading-10 font-normal text-[1rem]">
             or use your email for registration
           </h4>
           <form action="">
@@ -86,7 +101,7 @@ export default function page() {
                 </svg>
 
                 <input
-                  className="bg-[#f0f0f0] placeholder:pl-6   w-[500px] border py-2.5 px-[25px]"
+                  className="bg-[#00A8591A] placeholder:pl-6   w-[500px] border py-2.5 px-[25px]"
                   placeholder="Name"
                   type="text"
                 />
@@ -108,7 +123,7 @@ export default function page() {
                   />
                 </svg>
                 <input
-                  className="bg-[#f0f0f0] placeholder:pl-6 w-[500px] border py-2.5 px-[25px]"
+                  className="bg-[#00A8591A] placeholder:pl-6 w-[500px] border py-2.5 px-[25px]"
                   placeholder="Email"
                   type="email"
                 />
@@ -129,19 +144,16 @@ export default function page() {
                   />
                 </svg>
                 <input
-                  className="bg-[#f0f0f0] placeholder:pl-6 w-[500px] border py-2.5 px-[25px]"
+                  className="bg-[#00A8591A] placeholder:pl-6 w-[500px] border py-2.5 px-[25px]"
                   placeholder="Password"
                   type="password"
                 />
               </div>
-              <button className="bg-[#E3B522] mt-2 mx-auto leading-5 text-[#FFFFFF] text-[14px] px-5 py-2.5 rounded-[50px]">
+              <button className="bg-[#14BDE3] mt-4 mx-auto leading-5 text-[#FFFFFF] text-[14px] px-14 py-4 uppercase rounded-[50px]">
                 Sign up
               </button>
             </div>
           </form>
-        </div>
-        <div className="bg-[#14BDE3] text-center inclined absolute bottom-0 right-0 text-white h-[39px] w-[191px]">
-          <h1 className="mt-2">Sell on KGF</h1>
         </div>
       </div>
     </section>
